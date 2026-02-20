@@ -23,7 +23,7 @@
                 @elseif ($role === 'security_guard')
                     <flux:sidebar.group :heading="__('Guard')" class="grid">
                         <flux:sidebar.item icon="home" :href="route('guard.dashboard')" :current="request()->routeIs('guard.dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:sidebar.item>
-                        <flux:sidebar.item icon="document-plus" :href="route('guard.issue-infraction')" :current="request()->routeIs('guard.issue-infraction')" wire:navigate>{{ __('Issue Infraction') }}</flux:sidebar.item>
+                        <flux:sidebar.item icon="document-plus" :href="route('guard.issue-infraction')" :current="request()->routeIs('guard.issue-infraction')">{{ __('Issue Infraction') }}</flux:sidebar.item>
                         <flux:sidebar.item icon="qr-code" :href="route('guard.validate-student')" :current="request()->routeIs('guard.validate-student')" wire:navigate>{{ __('Validate Student') }}</flux:sidebar.item>
                     </flux:sidebar.group>
                 @else

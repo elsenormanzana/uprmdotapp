@@ -12,6 +12,11 @@ new class extends Component
     public string $search = '';
     public string $statusFilter = '';
 
+    public function mount(): void
+    {
+        $this->search = (string) request()->query('search', '');
+    }
+
     #[Computed]
     public function infractions()
     {
